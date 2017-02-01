@@ -1,0 +1,35 @@
+<ion-view view-title="History">
+  <ion-content>
+    <div class="list">
+      <label class="item item-input item-stacked-label">Exercise
+      <select ng-model="newExercise.name">
+        <option ng-repeat="exercise in exerciseList" value="{{exercise.name}}">{{exercise.name}}</option>
+      </select>
+      </label>
+
+      <label class="item item-input item-stacked-label">
+      <span class="input-label">Number of Sets</span>
+      <input id="numOfSets" placeholder="Number of Sets" ng-model="newExercise.sets" required>
+      </label>
+
+      <label class="item item-input item-stacked-label">
+      <span class="input-label">Number of Reps</span>
+      <input id="numOfReps" placeholder="Number of Reps" ng-model="newExercise.reps">
+      </label>
+
+      <label class="item item-input item-stacked-label">
+      <span class="input-label">Target Weight</span>
+      <input id="weightTarget" placeholder="Target Weight" ng-model="newExercise.targetWeight">
+      </label>
+
+      <label class="item item-input item-stacked-label">
+      <span class="input-label">Actual Weight</span>
+      <input id="weightActual" placeholder="Actual Weight" ng-model="newExercise.actualWeight">
+      </label>
+
+      <input type="submit" id="save" value="Add Exercise" ng-click="add()">
+      <br/>
+      <input type="submit" id="save" value="Log Workout" ng-click="logWorkout()">
+    </div>
+  </ion-content>
+</ion-view>
